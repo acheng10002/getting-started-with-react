@@ -1,4 +1,38 @@
-<!-- during development, Vite is a server, and index.html is the entry point to my app-->
+<!-- during development, Vite is a server, and index.html is the entry point to my app 
+ What are components?
+  individual, reusable chunks
+  These are JS functions that can take an input and return a React element: 
+  App - represents my main application; will be the parent of all other components 
+  Navbar - nav bar
+  MainArticle - component that renders my main content
+  NewsletterForm - form that lets a user input their email to receive the weekly
+                   newsletter 
+  What does a React element look like?
+  it's a plain object representation of a UI component
+    plain object - object created using the object literal syntax or the Object constructor
+  it's created using JSX
+    const element = <h1>&quot;I swear by my pretty floral bonnet, I will end you.&quot;</h1>;
+      ReactDOM.render() would render the element to the DOM in a typical React app
+    another ex: <img src="../public/fried-chicken.png" alt="fried chicken"></img>;
+  How are components created?
+    How would I create a functional component?
+      like JS functions!
+      function Greeting() {
+        return (
+          // &quot; is escape code used to render "
+          <h1>&quot;I swear by my pretty floral bonnet, I will end you.&quot;</h1>
+        );
+      }
+
+      function MyFavFood() {
+        return <img src="../public/fried-chicken.png" alt="fried chicken"></img>;
+      }
+  Where do components live?
+    in a directory, but it ability to use functionality created elsewhere and to
+    share itself with other components
+    How do I export and then import a component?
+      same as export/import statements for JS modules
+ -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,8 +43,22 @@
   </head>
   <body>
     <div id="root">
-      <p>Hello, World!</p>
-    </div>
+      <!-- <p>Hello, World!</p> -->
+      <ul>
+        <li>Creola Katherine Johnson: mathematician</li>
+        <li>Mario José Molina-Pasquel Henríquez: chemist</li>
+        <li>Mohammad Abdus Salam: physicist</li>
+        <li>Percy Lavon Julian: chemist</li>
+        <li>Subrahmanyan Chandrasekhar: astrophysicist</li>
+      </ul>
+      <!-- I will often want to display multiple similar components from a collection of data 
+           - need to show several instances of the same component using different data when building UIs
+             exs. lists of comments, galleries of profile images, etc. 
+             - the data can be stored in obejcts and arrays, and use array methods 
+     JS array methods can be used to manipulate an array of data and render lists of components
+     use filter() and map() with React to filter and transform my array of data into an array
+     of components 
+    --></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -161,4 +161,71 @@ conditionally render UI
     2. use the && operator
     3. use if, if/else, and switch statements
   
+What are keys and why does React need them?
+  Why does React need keys?
+    so that React knows which item to update and re-render when I change a list
+      when the list is changed either from a server or a user interaction,  
+      React matches the keys of each of the previous list item to the updated list
+      if there were any any changes, React will only update the items that have changed 
+      as long as key are consistent and unique, React can handle the DOM effectively and efficiently
+  How do I use keys? 
+    keys are passed into the component or into a DOM element as a prop
+What are good and bad examples of keys?
+  Where should the key value ideally come from?
+    they should be a unique identifier that is unique to each item in the list
+  When can I use an array index as the key value?
+    if I'm sure the list will remain unchanged through the application's life
+  What is an anti-pattern when using keys? 
+    keys should never be generated on the key
+    if they are, a new key will get created for every render of the list
+    key should be inferred from the data itself 
+  using keys is not limited to rendering lists
+
+
+<Component key={keyValue} />
+// or
+<div key={KeyValue} />
+
+
+Passing data between components
+  How does data flow between React components
+    From child to parent?
+      it doesn't
+    From parent to child?
+      data flows from parent components to child components only
+    Both?
+      just from parent to child, via props
+      any changes made to the data only affect child components
+  Why are props used in React?
+    by using props, I can account for any number of variations with a single component
+    How do I define default properties on a React component? What are some of the benefits of doing so?
+      in order to stop repeating myself re-defininf common values, and to protect my app from undefined
+      values, I can define default parameters to set as default values for props 
+    How can I pass functions as props?
+      The function is defined in the parent component.
+      1. A reference to this function is passed through as the value for a prop on the child component/
+         Pass props to the child component
+      2. The function is received in the child component and is called on a click event/
+         Read props inside the child component 
+  Using data to create customizable reusable components
+
+  What is state?
+    state - data which is manipulated and reflected in my running program
+            a component's memory
+  How to use state in React
+    What is the useState hook and how would I use it?
+      useState hook is a built-in hook in React, and I would use it to define state in a functional
+      component
+      useState takes an initial value as a parameter, and returns an array with two elements that I can
+      destructure to get: the current state value and a function to update the state value
+      const [stateValue, setStateValue] = useState(initialValue);
+  What happens when the state changes in React?
+    What happens to a component when one of its states is changed?
+      The component gets destroyed and recreated from scratch
+      the entire component is recreated but this time the latest state value will be returned from useState
+      rerendering happens - React efficiently updates the user interface in response to changes in the 
+        underlying data
+    What are some of the rules of hooks? 
+      1. hooks can only be called from the top level of a functional component
+      2. hooks can't be called from inside loops or conditions
 */

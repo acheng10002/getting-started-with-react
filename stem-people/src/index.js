@@ -5,23 +5,97 @@ import "./styles.css";
 import {
   ListOne,
   SplitList,
+  NameList,
   NestedLists,
   FullList,
   RecipeList,
   PoemWithManualLoop,
   PoemWithFragment,
+  TodoList,
+  MonthList,
+  App,
+  ParentComponent,
+  AppOne,
+  AppTwo,
+  Profile,
+  ProfileOne,
+  ProfileTwo,
+  ProfileFive,
+  Gallery,
+  ProfileSeven,
+  ProfileEight,
+  ProfileNine,
+  ProfileTen,
+  GalleryOne,
+  GalleryTwo,
+  Page,
+  GalleryThree,
+  GalleryFour,
+  Form,
+  FeedbackForm,
+  FeedbackFormOne,
+  AppFour,
+  AppFive,
+  AppSix,
+  AppSeven,
+  AppNine,
+  AppTen,
+  Image,
+  GalleryFive,
+  AppEleven,
+  AppTwelve,
 } from "./App.js";
 
+/*   I. Initial render
+     when my app starts, I need to trigger an initial render
+     I do this by calling createRoot with the target DOM node, and then calling its render
+     method with my component 
+     
+     if I don't call the components, they would all disappear! */
 const root = createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
     <ListOne />
     <SplitList />
+    <NameList />
     <NestedLists />
     <FullList />
     <RecipeList />
     <PoemWithManualLoop />
     <PoemWithFragment />
+    <TodoList />
+    <MonthList />
+    <App />
+    <ParentComponent />
+    <AppOne />
+    <AppTwo />
+    <Profile />
+    <ProfileOne />
+    <ProfileTwo />
+    <ProfileFive />
+    <Gallery />
+    <ProfileSeven />
+    <ProfileEight />
+    <ProfileNine />
+    <ProfileTen />
+    <GalleryOne />
+    <GalleryTwo />
+    <Page />
+    <GalleryThree />
+    <GalleryFour />
+    <Form />
+    <FeedbackForm />
+    <FeedbackFormOne />
+    <AppFour />
+    <AppFive />
+    <AppSix />
+    <AppSeven />
+    <AppNine />
+    <AppTen />
+    <Image />
+    <GalleryFive />
+    <AppEleven />
+    <AppTwelve />
   </StrictMode>
 );
 
